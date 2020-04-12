@@ -9,7 +9,8 @@ import { LEADERS } from '../shared/leaders';
 import Header from './headerComponent';
 import Footer from './footerComponent';
 import Home from './homeComponent';
-import Contact from './contactComponent'
+import Contact from './contactComponent';
+import About from './aboutComponent';
 class Main extends Component {
   constructor(props) { 
     super(props);
@@ -27,8 +28,12 @@ class Main extends Component {
         dish={this.state.dishes.filter((dish)=>dish.featured)[0]}
         promotion={this.state.promotions.filter((promo)=>promo.featured)[0]}
         leader={this.state.leaders.filter((leader)=>leader.featured)[0]}
-        />);
-      
+        />);      
+    };
+    const AboutPage =()=> {
+      return(<About
+        leaders={this.state.leaders}
+        />);      
     };
 const DishWithId = ({match}) => {
       return(
@@ -42,6 +47,7 @@ const DishWithId = ({match}) => {
       <Header/>
       <Switch>        
         <Route exact path='/home' component={HomePage}/>
+        <Route exact path='/aboutus' component={AboutPage}/>
         <Route exact path='/menu' component={()=> <Menu dishes={this.state.dishes}/>}/>
         <Route path='/menu/:dishId' component={DishWithId} />
         <Route exact path='/contactus' component={Contact}/>
