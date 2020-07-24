@@ -60,7 +60,7 @@ class Header extends Component {
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                    <Button outline color="info" onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
@@ -70,7 +70,7 @@ class Header extends Component {
                     <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
-                                <h1>Ristorante con Fusion</h1>
+                                <h1>SRK. Collection</h1>
                                 <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                             </div>
                         </div>
